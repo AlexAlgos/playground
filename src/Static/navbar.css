@@ -1,0 +1,112 @@
+.navbar {
+    background-color: #00a67d;
+    padding: 10px 20px;
+  }
+  
+  .navbar-brand {
+    color: #fff;
+    text-decoration: none;
+    font-size: 32px;
+  }
+
+  .navbar-brand:hover {
+    color: #000000;
+    transition: color 0.3s ease;
+  }
+
+  .navbar-nav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .nav-item {
+    margin: 0 10px;
+  }
+  
+  .nav-link {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .nav-link:hover {
+    background-color: #000000;
+  }
+
+  /* Dark mode configuration */
+  .navbar.navbar-dark {
+    background-color: #1e1e1e;
+  }
+
+  .navbar-dark .navbar-brand:hover {
+    color: #f3ff00;
+    transition: color 0.3s ease;
+  }
+
+  .navbar-dark .nav-link {
+    color: #00a67d; /* Green text color for links in dark mode */
+  }
+
+/* Button styles for the dark/light mode toggle */
+button {
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  /* Additional styles to distinguish the sun and moon emojis */
+  button:after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: transparent;
+  }
+  
+  button:after {
+    right: 5px; /* Position for the moon */
+  }
+  
+  button:before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: transparent;
+  }
+  
+  button:before {
+    left: 5px; /* Position for the sun */
+  }
+  
+/* Media query for responsiveness */
+  @media (max-width: 36em) {
+    /* CSS styles for small devices (phones) */
+    .navbar {
+      display: block; /* Display the top navbar for small devices */
+    }
+  }
+  
+  @media (min-width: 48em) and (max-width: 61.9375em) {
+    /* CSS styles for medium devices (tablets) */
+    /* No changes needed for medium devices, keep the top navbar displayed */
+  }
+  
+  @media (min-width: 62em) and (max-width: 74.9375em) {
+    /* CSS styles for large devices (laptops) */
+    /* No changes needed for large devices, keep the top navbar displayed */
+  }
+  
+  @media (min-width: 75em) {
+    /* CSS styles for extra large devices (large desktops) */
+    /* No changes needed for extra-large devices, keep the top navbar displayed */
+  }
+  

@@ -1,0 +1,117 @@
+@import url('navbar.css');
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  height: calc(50vh - 40px);
+}
+
+.array-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row; /* By default, the array is arranged in a row */
+}
+
+.array-cell {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border: 2px solid green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+  background-color: #fff; 
+  margin: 0.5px;
+  margin-bottom: 20px;
+}
+
+.cell-index {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* Media query for responsive design */
+@media (max-width: 700px) {
+  .array-container {
+    flex-direction: column; /* When the width shrinks below 800px, it'll switch to a column layout */
+    margin-top: 800px;
+  }
+}
+
+.dark-mode .array-cell {
+  background-color: #333; /* Dark background for cells in dark mode */
+  border: 2px solid green;
+  color: #000000; /* Text color in dark mode */
+}
+
+.dark-mode .cell-index {
+  color: #00a67d; /* Text color in dark mode */
+}
+
+.button-input-container {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.form-control-me-2 {
+  width: 200px;
+  height: 32px;
+  margin-top: 48px;
+  margin-right: 5px;
+}
+
+.insert-button {
+  padding: 5px 5px;
+  background-color: #00a67d; /* Light mode background color */
+  color: #fff;
+  border: 2px solid;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 50px;
+}
+
+.insert-button:hover {
+  background-color: #004529;
+}
+
+.remove-button {
+  padding: 5px 5px;
+  background-color: red; /* Light mode background color */
+  color: #fff;
+  border: 2px solid;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 50px;
+}
+
+.remove-button:hover {
+  background-color: darkred;
+}
+
+/* Dark mode specific styles */
+.dark-mode .insert-button {
+  background-color: #00a67d;
+  color: #fff;
+}
+
+.dark-mode .insert-button:hover {
+  background-color: darkgreen;
+}
+
+.dark-mode .remove-button {
+  background-color: red;
+  color: #fff;
+}
+
+.dark-mode .remove-button:hover {
+  background-color: darkred;
+}
