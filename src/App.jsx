@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import ArrayVisualizer from './static-array';
 import DynamicArray from './dynamic-array';
 import CustomNavbar from './navbar';
