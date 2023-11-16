@@ -10,11 +10,13 @@ const DynamicArrayVisualizer = () => {
     const { isDarkMode } = useDarkMode();
 
     const handleInsert = () => {
-        if (inputValue.trim() === '') {
+        if (inputValue.trim() === '') { // Validate the input
             window.alert('Please enter a valid value from 0-999!');
             return;
         }
+        // Count null elements in the array
         const nullCount = array.filter((element) => element === null).length;
+        // If array is full, double its size up to the maximum capacity
         if (nullCount === 0) {
             if (array.length < maxCapacity) {
                 const newArray = new Array(array.length * 2).fill(null);
@@ -26,17 +28,19 @@ const DynamicArrayVisualizer = () => {
             } else {
                 window.alert('Array size has reached the maximum capacity of 8!');
             }
-        } else {
+        } else { // If there's an empty space, insert the value at the first empty index
             const newArray = [...array];
             const emptyIndex = newArray.findIndex((element) => element === null);
             newArray[emptyIndex] = inputValue;
             setArray(newArray);
         }
     }
+    // Function to handle removing the last inserted value from the dynamic array
     const handleRemove = () => {
+        // Find the index of the last filled (non-null) element in the array, or -1 if the array is empty.
         const lastFilledIndex = array.reduce((acc, _, index) => (array[index] ? index : acc), -1);
         if (lastFilledIndex !== -1) {
-            const newArray = [...array];
+            const newArray = [...array]; // Copy of the original size array before doubling
             newArray[lastFilledIndex] = null; // Remove the last inserted element
             setArray(newArray);
             // Reduce the array size if it's larger than the minimum capacity

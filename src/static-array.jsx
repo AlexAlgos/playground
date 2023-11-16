@@ -8,7 +8,9 @@ const ArrayVisualizer = () => {
   const {isDarkMode} = useDarkMode(); // Dark mode state
 
   const handleInsert = () => {
+    // Create a shallow copy of the original array using the spread operator
     const newArray = [...array];
+    // Find the index of the first element in the copied array that is null
     const emptyIndex = newArray.findIndex((element) => element === null);
 
     if (emptyIndex !== -1) {
@@ -25,6 +27,7 @@ const ArrayVisualizer = () => {
   }
 
   const handleRemove = () => {
+    // Find the index of the last filled (non-null) element in the array, or -1 if the array is empty.
     const lastFilledIndex = array.reduce((acc, _, index) => (array[index] ? index : acc), -1);
     if (lastFilledIndex !== -1) {
       const newArray = [...array];

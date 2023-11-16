@@ -63,7 +63,7 @@
 .form-control-me-2 {
   width: 200px;
   height: 32px;
-  margin-top: 48px;
+  margin-top: 5px;
   margin-right: 5px;
 }
 
@@ -75,7 +75,7 @@
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-top: 50px;
+  /* margin-top: 5px; */
 }
 
 .insert-button:hover {
@@ -90,7 +90,7 @@
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-top: 50px;
+  /* margin-top: 5px; */
 }
 
 .remove-button:hover {

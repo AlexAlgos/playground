@@ -3,6 +3,7 @@ import { useDarkMode } from './dark-mode'; // Import the useDarkMode hook
 import './Static/navbar.css'; // Your navbar styles file
 
 const CustomNavbar = () => {
+  // Accessing the current location using the useLocation hook from React Router
   const location = useLocation();
   const { isDarkMode, toggleDarkMode } = useDarkMode(); // Access dark mode state and toggle function
 
